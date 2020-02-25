@@ -1,0 +1,19 @@
+filebeat.inputs:
+  - type: log
+    paths:
+      - /usr/share/services/nginx/access.log
+  
+  #output.console:
+  #  pretty: true
+  
+output.kafka:
+#  codec.format:
+#    string: '%{[@timestamp]} %{[message]}'
+#  hosts: ["10.128.0.26:29092", "10.128.0.28:29092, "10.128.0.28:29092"]
+  hosts: ["kafka1:9092", "kafka2:9093", "kafka3:9094"]
+  topic: 'log'
+  partition.round_robin:
+    reachable_only: false
+  required_acks: 1
+  compression: none
+  max_message_bytes: 1000000
