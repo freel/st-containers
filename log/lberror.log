@@ -1,0 +1,4 @@
+2020/02/26 06:12:14 [error] 6#6: *23 connect() failed (113: No route to host) while connecting to upstream, client: 10.0.0.3, server: , request: "GET / HTTP/1.1", upstream: "http://10.0.1.25:5601/", host: "10.128.0.27:15601"
+2020/02/26 06:15:39 [error] 6#6: *68 connect() failed (113: No route to host) while connecting to upstream, client: 10.0.0.3, server: , request: "GET / HTTP/1.1", upstream: "http://10.0.1.25:5601/", host: "10.128.0.27:15601"
+2020/02/26 07:05:17 [error] 6#6: *308 connect() failed (113: No route to host) while connecting to upstream, client: 10.0.0.2, server: , request: "GET / HTTP/1.1", upstream: "http://10.0.1.25:5601/", host: "10.128.0.26:15601"
+2020/02/26 08:16:12 [error] 6#6: *583 connect() failed (113: No route to host) while connecting to upstream, client: 10.0.0.3, server: , request: "GET / HTTP/1.1", upstream: "http://10.0.1.25:5601/", host: "10.128.0.27:15601"
