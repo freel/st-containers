@@ -12,23 +12,7 @@ services:
       - 15601:15601
     networks:
       - elk
-    deploy:
-      mode: replicated
-      replicas: 1
 
-  filebeat:
-    image: docker.elastic.co/beats/filebeat:7.6.0
-    hostname: filebeat
-    networks:
-      - elk
-    volumes:
-      - ./filebeat/filebeat.yml:/usr/share/filebeat/filebeat.yml
-      - ./log:/usr/share/services/nginx
-    deploy:
-      mode: replicated
-      replicas: 1
-
-  
   zookeeper:
     image: confluentinc/cp-zookeeper:latest
     container_name: zookeeper
@@ -43,9 +27,6 @@ services:
       - 2181:2181
     networks:
       - elk
-    deploy:
-      mode: replicated
-      replicas: 1
 
   kafka1:
     image: confluentinc/cp-kafka:latest
@@ -64,9 +45,6 @@ services:
       - 9092:9092
     networks:
       - elk
-    deploy:
-      mode: replicated
-      replicas: 1
 
   kafka2:
     image: confluentinc/cp-kafka:latest
@@ -85,9 +63,6 @@ services:
       - 9093:9093
     networks:
       - elk
-    deploy:
-      mode: replicated
-      replicas: 1
 
   kafka3:
     image: confluentinc/cp-kafka:latest
@@ -106,9 +81,6 @@ services:
       - 9094:9094
     networks:
       - elk
-    deploy:
-      mode: replicated
-      replicas: 1
 
   elasticsearch1:
     image: docker.elastic.co/elasticsearch/elasticsearch:7.6.0
@@ -126,9 +98,6 @@ services:
       - 9200:9200
     networks:
       - elk
-    deploy:
-      mode: replicated
-      replicas: 1
   
   elasticsearch2:
     image: docker.elastic.co/elasticsearch/elasticsearch:7.6.0
@@ -145,9 +114,6 @@ services:
       - esdata02:/usr/share/elasticsearch/data
     networks:
       - elk
-    deploy:
-      mode: replicated
-      replicas: 1
 
   elasticsearch3:
     image: docker.elastic.co/elasticsearch/elasticsearch:7.6.0
@@ -164,46 +130,6 @@ services:
       - esdata03:/usr/share/elasticsearch/data
     networks:
       - elk
-    deploy:
-      mode: replicated
-      replicas: 1
-
-  logstash:
-    image: docker.elastic.co/logstash/logstash:7.6.0
-    environment:
-      LS_JAVA_OPTS: "-Xmx256m -Xms256m"
-    volumes:
-      - ./logstash/logstash.conf:/usr/share/logstash/pipeline/logstash.conf
-      - lsdata01:/usr/share/logstash/data
-    ports:
-      - "9600:9600"
-    networks:
-      - elk
-    deploy:
-      mode: replicated
-      replicas: 1
-      update_config:
-        failure_action: rollback
-        parallelism: 1
-        delay: 30s
-
-  kibana:
-    image: docker.elastic.co/kibana/kibana:7.6.0
-    volumes:
-      - kdata01:/usr/share/kibana/data
-    environment:
-#      ELASTICSEARCH_HOSTS: ["http://elasticsearch1:9200","http://elasticsearch2:9200","http://elasticsearch3:9200"]
-      ELASTICSEARCH_URL: http://elasticsearch1:9200
-      ELASTICSEARCH_HOSTS: http://elasticsearch1:9200
-#      ELASTICSEARCH_HOSTS: "http://elasticsearch1:9200","http://elasticsearch2:9200","http://elasticsearch3:9200"
-    ports:
-      - 5601:5601
-    networks:
-      - elk
-    deploy:
-      mode: replicated
-      replicas: 1
-
 
 volumes:
   esdata01:
@@ -219,4 +145,4 @@ volumes:
 
 networks:
   elk:
-    external: true
+    driver: bridge

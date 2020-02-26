@@ -2,16 +2,16 @@ filebeat.inputs:
   - type: log
     paths:
       - /usr/share/services/nginx/access.log
+    fields:
+      apache: true
+    fields_under_root: true
   
   #output.console:
   #  pretty: true
   
 output.kafka:
-#  codec.format:
-#    string: '%{[@timestamp]} %{[message]}'
-#  hosts: ["10.128.0.26:29092", "10.128.0.28:29092, "10.128.0.28:29092"]
-  hosts: ["kafka1:9092", "kafka2:9093", "kafka3:9094"]
-  topic: 'log'
+  hosts: ["kafka1:29092", "kafka2:39093", "kafka3:49094"]
+  topic: 'stlog'
   partition.round_robin:
     reachable_only: false
   required_acks: 1

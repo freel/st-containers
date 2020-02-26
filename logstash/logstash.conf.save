@@ -8,14 +8,9 @@ input {
 
 filter {
     if [type] == "apache-access"{
-        json {
-            source => "message"
-            add_field => {
-                "log_message" => "%{message}"
-            }
-        }
         grok {
-            match => ["message", "%{COMBINEDAPACHELOG}"]
+            match => { "message" => ""}
+            overwrite => ["message"]
         }
     }
 }
