@@ -6,9 +6,6 @@ filebeat.inputs:
       apache: true
     fields_under_root: true
   
-  #output.console:
-  #  pretty: true
-  
 output.kafka:
   hosts: ["kafka1:29092", "kafka2:39093", "kafka3:49094"]
   topic: 'stlog'
